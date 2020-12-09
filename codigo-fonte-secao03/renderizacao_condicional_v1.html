@@ -8,13 +8,17 @@
 </head>
 <body>
     <div id="app">
-        <p>Olá VueJS!</p>
-        <p>Até logo VueJS!</p>
+        <p v-if="mostrar">Olá VueJS!</p>
+        <p v-else>Até logo VueJS!</p>
+        <button @click="mostrar = !mostrar">Altenar</button>
     </div>
 
     <script type="text/javascript">
         new Vue ({
-            el: '#app'
+            el: '#app',
+            data: {
+                mostrar: true
+            }
         });
     </script>
 </body>
