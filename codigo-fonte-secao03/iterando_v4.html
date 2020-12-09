@@ -10,35 +10,15 @@
 
 <body>
     <div id="app">
-        <h1>Produto</h1>
+        <h1>Números</h1>
         <ul>
-            <li v-for="valor in produto">
-                {{ valor }}
-            </li>
-        </ul>
-        <ul>
-            <li v-for="(valor, chave) in produto">
-                {{ chave }} : {{ valor }}
-            </li>
-        </ul>
-        <ul>
-            <li v-for="(valor, chave, indice) in produto">
-                {{indice}}.{{ chave }} : {{ valor }}
-            </li>
+            <li v-for="(valor, index) in 30">{{ index }} : {{valor}}</li>
         </ul>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: '#app',
-            data: {
-                produto: {
-                    id: 1,
-                    teclado: 'Teclado',
-                    marca: 'Dell',
-                    valor: 100
-                }
-            }
         });
     </script>
 </body>
